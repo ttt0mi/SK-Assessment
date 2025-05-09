@@ -1,0 +1,399 @@
+#3.1
+
+
+
+
+
+#3.2
+
+There is nothing wrong with it
+
+
+
+#3.3
+
+>>>>>>>>>>
+<<<<<<<<<<
+>>>>>>>>>>
+<<<<<<<<<<
+>>>>>>>>>>
+<<<<<<<<<<
+>>>>>>>>>>
+<<<<<<<<<<
+>>>>>>>>>>
+<<<<<<<<<<
+
+
+
+#3.4
+
+for row in range(2);
+	for column in range(7);
+		print("@", end = "")
+	print()
+
+
+
+#3.5
+
+numb1 = int(input("Enter a number: "))
+numb2 = int(input("Enter a number: "))
+
+if number1 == number2:
+	print(numb1, "is equal to", numb2)
+else:
+	print(numb1, "is not equal to", numb2)
+
+
+if number1 < number2:
+	print(numb1, "is less than", numb2)
+else:
+	print(numb1, "is greater than or equal to", numb2)
+
+
+ if number1 <= number2:
+	print(numb1, "is less than or equal to", numb2)
+else:
+	print(numb1, "is greater than", numb2)
+
+
+
+
+#3.6
+
+q1 = str(input("What is your problem? "))
+
+q2 = str(input("Have you had this problem before?(yes or no) "))
+
+if q2 == "yes":
+	print("Well, you have it again.")
+if q2 == "no":
+	print("Well, you have it now")
+
+
+No, Because the computer's statements depend on yes or no answers from the user.
+any other answer breaks the program
+
+
+
+
+#3.7
+
+print("number\tsquare\tcube")
+
+for numb in range(6):
+	print(f"{numb}\t{numb ** 2}\t{numb ** 3}")
+
+
+
+#3.8
+
+sum = 0
+product = 1
+largest_number = -1000 ** 1000
+smallest_number = 1000 ** 1000
+
+for count in range(4):
+	number = int(input("Enter an integer: "))
+	
+	sum += number
+	product *= number
+
+	if number > largest_number:
+		largest_number = number
+	if number < smallest_number:
+		smallest_number = number
+
+average = sum / 4
+
+
+print("The sum is ", sum)
+print("The average is ", average)
+print("The product is ", product)
+print("The largest number is ",  largest_number)
+print("The smallest number is ", smallest_number)
+
+
+
+#3.9
+
+number = int(input("Enter a number: "))
+
+result = str(" ")
+
+if number < 10000 or number > 99999:
+	print("invalid")
+
+if number >= 10000 and number <= 99999:
+
+	while number != 0:
+
+		digit = str(number % 10)
+		number //= 10
+
+		result = "   " + digit + result
+
+
+print(result)
+
+
+
+#3.10
+
+principal = 1000
+annual_rate = 7
+
+annual_rate_in_decimal = 7/100
+
+for years in range(1, 31):
+
+	deposit_amount_year = principal * ((1 + annual_rate_in_decimal) ** years)
+
+	print(f"The deposit amount after year {years} is ${deposit_amount_year:,.2f}")
+
+
+
+#3.11
+
+
+gallons_used = float(input("How many gallons of fuel did you use?(enter -1 to get results) "))
+
+total_gallons_used = 0
+total_miles_driven = 0
+
+while gallons_used != -1:
+
+	miles_driven = float(input("How many miles did you drive? "))
+
+
+	miles_driven_per_gallon = miles_driven / gallons_used
+	print(f"The miles used per gallon for this tank was {miles_driven_per_gallon:.6f}")
+	
+
+	total_gallons_used += gallons_used	
+	total_miles_driven += miles_driven
+
+	gallons_used = float(input("How many gallons of fuel did you use?(enter -1 to get results) "))
+
+
+average = total_miles_driven / total_gallons_used
+
+print(f"Your overall average miles per gallon was {average:.6f}")
+
+
+
+#3.12
+
+number = int(input("Enter a number: "))
+
+main_number = number
+
+while number != 0:
+		
+	digit = number % 10
+	reverse_number = reverse_number * 10 + digit
+	number /= 10
+
+if main_number == reverse_number:
+	print(main_number, "is a palindrome")
+else:
+	print(main_number, "is not a palindrome")
+
+
+
+#3.13
+
+number = int(input("Enter a number: "))
+
+counter = 0
+factorial = 1
+
+while(counter < number):
+
+	factorial *= (number - counter)
+	counter += 1
+
+print(factorial)
+
+
+
+#3.14
+
+#3.15
+
+#3.16
+
+max_number = -1000 ** 1000
+second_max_number = -1000 ** 1000
+
+for count in range(10):
+	
+	number = int(input("Enter your number: "))
+
+	if number > max_number:
+		second_max_number = max_number
+		max_number = number
+			
+	elif number > second_max_number:
+		second_max_number = number
+
+
+print(f"{max_number} is the largest number")
+print(f"{second_max_number} is the 2nd largest number")
+
+
+
+#3.17
+
+for row in range(10):
+	for column in range(row):
+		print("*", end = "")
+	print()
+
+print()
+
+
+for row in range(10):
+	for column in range(row, 10):
+		print("*", end = "")
+	print()
+
+print()
+
+
+for row in range(10):
+	for column in range(row):
+		print(" ", end = "")
+	for column in range(row, 10):
+		print("*", end = "")
+
+	print()
+
+print()
+
+
+for row in range(10):
+	for column in range(row, 10):
+		print(" ", end = "")
+	for column in range(row):
+		print("*", end = "")
+
+	print()
+
+print()
+
+
+
+#3.18
+
+#3.19
+
+#3.20
+
+decimal_number = 0
+
+binary_number = int(input("Enter a binary Number: "))
+
+#binary_number_string = str(binary_number)
+
+binary_number_length = len(str(binary_number))
+
+for exponent in range(binary_number_length):
+
+	digit = binary_number % 10
+	binary_number //= 10
+
+	decimal_of_digit = digit * 2 ** exponent
+
+	decimal_number += decimal_of_digit
+	
+
+print(decimal_number)
+
+
+#3.21
+
+query = (input("This item costs 26 cents. enter 'OK' to purchase "))
+print()
+
+if query == 'OK':
+	print("You paid with a dollar bill")
+
+if query != 'OK':
+	print("Ode, You still paid with a dollar bill")
+
+
+change_in_cents = 100 - 26
+
+if change_in_cents == 0:
+	print("Ypu have no change, leave mate")
+
+elif change_in_cents < 0 or change_in_cents > 99:
+	print("impossible, Fuck off pisspot")
+
+else:
+	quaters = change_in_cents // 25		#1 quater = 25 cents
+	change_in_cents %= 25			#remaining_change_after_removing_quaters
+	
+	dimes = change_in_cents // 10		#1 dime = 10 cents
+	change_in_cents %= 10			#remaining_change_after_removing_dimes
+
+	pennies = change_in_cents			#1 penny = 1 cent
+
+
+	print("Your change is:")
+	print(quaters, "quaters")
+	print(dimes, "dimes")
+	print(pennies, "pennies")
+
+
+
+
+#3.22
+
+for i in range(2):
+	value = int(input('Enter an integer (-1 to break): '))
+	print('You entered:', value)
+
+	if value == -1:
+		break
+else:
+	print('The loop terminated without executing the break')
+
+
+confirmed.
+
+
+
+#3.23
+it is an indentation error. yes, tabnannny flagged it as an error
+
+#3.24
+#3.25
+#3.26
+
+#3.27
+
+world_population = 8217130000
+annual_growth_rate= 0.0085
+
+print()
+print("\t\t World Population \t World Population Increase")
+
+for years in range(1, 101):
+
+	world_population = (world_population * annual_growth_rate) + world_population
+	world_population_increase = world_population * annual_growth_rate
+
+	print(f"after year {years} \t {world_population:,.0f}     \t {world_population_increase:,.0f}")
+
+
+
+#3.28
+
+
+
+
+
+
+

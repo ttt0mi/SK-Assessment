@@ -1,0 +1,278 @@
+#2.1
+
+a. x = 2
+b. Value of 2 + 2 is 4
+c. x =
+d. 5 = 5
+
+
+
+#2.2
+
+The variable's datatype is not specified to solely collect type integer
+
+
+
+#2.3
+
+print("Congratulations! Your grade of ", grade ," earns you an A in this course")
+
+
+
+#2.4 (arithmetic_operators)
+
+number = 27.5 + 2 
+print(number )i.e 29.5
+
+number = 27.5 - 2
+print(number )i.e 25.5
+
+number = 27.5 * 2
+print(number )i.e 55
+
+number = 27.5 / 2
+print(number )i.e 13.75
+
+number = 27.5 // 2
+print(number )i.e 13
+
+number = 27.5 ** 2
+print(number )i.e 756.25
+
+
+
+#2.5(circle)
+
+radius = 2
+PI = 3.14159
+
+diameter = 2 * radius
+circumference = 2 * PI * radius
+area = PI * radius ** 2
+
+print(diameter)
+print(circumference)
+print(area)
+
+
+
+#2.6(even_odd)
+
+number = int(input("Enter a number : "))
+
+if number % 2 == 0:
+	print("This is an even number")
+
+if number % 2 != 0:
+	print("This is an odd number")
+
+
+
+#2.7(multiples_of_4)
+
+number = int(input("Enter a number : "))
+
+if number % 4 == 0:
+	print(number, " is a multiple of 4")
+
+
+
+#2.8(square_cube_table)
+
+numb0 = 0
+numb1 = 1
+numb2 = 2
+numb3 = 3
+numb4 = 4
+numb5 = 5
+
+print("number\tsquare\tcube")
+print(f"{numb0}\t{numb0 ** 2}\t{numb0 ** 3}")
+print(f"{numb1}\t{numb1 ** 2}\t{numb1 ** 3}")
+print(f"{numb2}\t{numb2 ** 2}\t{numb2 ** 3}")
+print(f"{numb3}\t{numb3 ** 2}\t{numb3 ** 3}")
+print(f"{numb4}\t{numb4 ** 2}\t{numb4 ** 3}")
+print(f"{numb5}\t{numb5 ** 2}\t{numb5 ** 3}")
+
+
+
+#2.9(integer_value_of_characters)
+
+ord('B')
+ord('C')
+ord('D')
+ord('b')
+ord('c')
+ord('d')
+ord('0')
+ord('1')
+ord('2')
+ord('$')
+ord('*')
+ord('+')
+ord(' ')
+
+
+
+#2.10(sum_avg_prod_minmax)
+
+numb1 = int(input("Enter a number : "))
+numb2 = int(input("Enter another number : "))
+numb3 = int(input("Enter one more number : "))
+
+sum = numb1 + numb2 + numb3
+average = sum / 3
+product = numb1 * numb2 * numb3
+
+print("The sum is ", sum)
+print("The average is ", average)
+print("The product is ", product)
+
+if numb1 >= numb2 and numb1 >= numb3:
+	print("The largest number is ", numb1)
+	
+if numb2 >= numb1 and numb2 >= numb3:
+	print("The largest number is ", numb2)
+
+if numb3 >= numb1 and numb3 >= numb2:
+	print("The largest number is ", numb3)
+
+
+if numb1 <= numb2 and numb1 <= numb3:
+	print("The smallest number is ", numb1)
+	
+if numb2 <= numb1 and numb2 <= numb3:
+	print("The smallest number is ", numb2)
+
+if numb3 <= numb1 and numb3 <= numb2:
+	print("The smallest number is ", numb3)
+	
+
+
+#2.11(seperating_digits)
+
+numb = int(input("Enter a number : "))
+
+if numb < 10000 or numb > 99999:
+	print("invalid")
+
+if numb >= 10000 and numb <= 99999:
+
+	digit1 = numb % 10
+	numb = numb // 10
+
+	digit2 = numb % 10
+	numb = numb // 10
+
+	digit3 = numb % 10
+	numb = numb // 10
+
+	digit4 = numb % 10
+	numb = numb // 10
+
+	digit5 = numb % 10
+	numb = numb // 10
+
+print(digit1, "   ", digit2, "   ", digit3, "   ", digit4, "   ", digit5)
+
+
+
+#2.12(annual_deposit)
+
+principal = 1000
+annual_rate = 7
+years = 10
+
+annual_rate_in_decimal = 7/100
+
+deposit_amount_year1 = principal * ((1 + annual_rate_in_decimal) ** years)
+deposit_amount_year2 = principal * ((1 + annual_rate_in_decimal) ** (years * 2))
+deposit_amount_year3 = principal * ((1 + annual_rate_in_decimal) ** (years * 3))
+
+print("The deposit amount afrter 10 years is $", deposit_amount_year1)
+print("The deposit amount afrter 20 years is $", deposit_amount_year2)
+print("The deposit amount afrter 30 years is $", deposit_amount_year3)
+
+
+
+#2.13
+
+Python will not acept an value which contains more than 4,300 digits
+
+
+
+#2.14
+
+
+
+
+
+#2.15(ascending_sort)
+
+numb1 = float(input("Enter a number : "))
+numb2 = float(input("Enter another number : "))
+numb3 = float(input("Enter one more number : "))
+
+
+if numb1 <= numb2 and numb1 <= numb3:
+	smallest_numb = numb1
+
+	if numb2 <= numb3:
+		second_smallest_numb = numb2
+	if numb3 <= numb2:
+		second_smallest_numb = numb3
+
+	
+if numb2 <= numb1 and numb2 <= numb3:
+	smallest_numb = numb2
+
+	if numb1 <= numb3:
+		second_smallest_numb = numb1
+	if numb3 <= numb1:
+		second_smallest_numb = numb3
+
+
+if numb3 <= numb1 and numb3 <= numb2:
+	smallest_numb = numb3
+
+	if numb2 <= numb1:
+		second_smallest_numb = numb2
+	if numb1 <= numb2:
+		second_smallest_numb = numb1
+
+
+
+if numb1 >= numb2 and numb1 >= numb3:
+	largest_numb = numb1
+	
+if numb2 >= numb1 and numb2 >= numb3:
+	largest_numb = numb2
+	
+if numb3 >= numb1 and numb3 >= numb2:
+	largest_numb = numb3
+
+
+
+print(smallest_numb, ", " ,second_smallest_numb, ", " ,largest_numb)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 

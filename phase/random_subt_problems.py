@@ -20,7 +20,7 @@ def subtraction(numbers, answer):
 score_counter = 0
 question_counter = 0
 
-datetime.timedelta()
+time = datetime.datetime.now()
 while question_counter <= 10:
 
 	numbers = random_numbers()
@@ -43,4 +43,4 @@ while question_counter <= 10:
 
 
 print(f"Your score is {score_counter}")
-print(datetime.timedelta())
+print(f"this took you {datetime.datetime.now() - time}")

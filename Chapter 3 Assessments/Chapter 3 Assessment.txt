@@ -1,6 +1,28 @@
 #3.1
 
+passes = 0
+failures = 0
+valid_user_input = 0
 
+while valid_user_input < 10:
+
+	result = int(input("Enter Result(1 for passed, 2 for failures): "))
+
+	if result == 1:
+		passes += 1
+		valid_user_input += 1
+
+	elif result == 2:
+		failure += 1
+		valid_user_input += 1
+
+	else:
+		print("Invalid input, Try again..")
+print(f" Number of passes: {passes}")
+print(failures)
+
+if passes > 8:
+	print("Kudos to the instructor")
 
 
 
@@ -219,7 +241,23 @@ print(factorial)
 
 #3.14
 
+
+
+
+
 #3.15
+
+import math
+
+e = 0
+
+for number in range(10):
+
+	e += 1 / math.factorial(number)                                                                                                                                        
+
+print(f"Euler's constant after 10 terms is {e}")
+
+
 
 #3.16
 
@@ -294,8 +332,6 @@ decimal_number = 0
 
 binary_number = int(input("Enter a binary Number: "))
 
-#binary_number_string = str(binary_number)
-
 binary_number_length = len(str(binary_number))
 
 for exponent in range(binary_number_length):
@@ -326,24 +362,28 @@ if query != 'OK':
 change_in_cents = 100 - 26
 
 if change_in_cents == 0:
-	print("Ypu have no change, leave mate")
+	print("You have no change, leave mate")
 
 elif change_in_cents < 0 or change_in_cents > 99:
 	print("impossible, Fuck off pisspot")
 
 else:
-	quaters = change_in_cents // 25		#1 quater = 25 cents
-	change_in_cents %= 25			#remaining_change_after_removing_quaters
+	quarters = change_in_cents // 25		#1 quarter = 25 cents
+	change_in_cents %= 25		#remaining_change_after_removing_quarters
 	
 	dimes = change_in_cents // 10		#1 dime = 10 cents
-	change_in_cents %= 10			#remaining_change_after_removing_dimes
+	change_in_cents %= 10		#remaining_change_after_removing_dimes
+
+	nickels = change_in_cents // 5		#1 nickel = 5 cents
+	change_in_cents %= 5			#remaining_change_after_removing_nickels
 
 	pennies = change_in_cents			#1 penny = 1 cent
 
 
 	print("Your change is:")
-	print(quaters, "quaters")
+	print(quarters, "quarters")
 	print(dimes, "dimes")
+	print(nickels, "nickels")
 	print(pennies, "pennies")
 
 
@@ -368,6 +408,7 @@ confirmed.
 #3.23
 it is an indentation error. yes, tabnannny flagged it as an error
 
+
 #3.24
 #3.25
 #3.26
@@ -391,9 +432,70 @@ for years in range(1, 101):
 
 #3.28
 
+import statistics
+
+values = [9, 11, 22, 34, 17, 22, 34, 22, 40]
+
+mean = statistics.mean(values)
+
+sorted_values = sorted(values)
+median = statistics.median(sorted_values)
+
+mode = statistics.mode(values)
+
+
+print(,, mean)
+print(, median)
+print("The mode is", mode)
+
+"""
+if we add an extra 34 to the list of values:
+the mean changes
+the median changes
+the mode incurs a statisticsError
+"""
+
+
+#3.29
+
+import statistics
+
+values = [9, 11, 60, 22, 35, 70, 17, 22, 35, 50, 22, 40]
+
+sorted_values = sorted(values)
+
+print("The mean is", statistics.mean(values))
+print("The median is", statistics.median(sorted_values))
+print("The mode is", statistics.mode(values))
+
+
+"""
+i noticed no problem with the median
+"""
 
 
 
+#3.30
+
+import statistics
+
+values = [9, 11, 22, 34, 17, 22, 34, 22, 40, 45678]
+
+sorted_values = sorted(values)
+
+print("The mean is", statistics.mean(values))
+print("The median is", statistics.median(sorted_values))
+print("The mode is", statistics.mode(values))
 
 
+"""
+mean is by far the central tendency most affected by outliers because even though outliers are out of the ordinary, they have to be computed no matter how absurd their values are, which skews the mean too far from the ordinary values
 
+mode is the central tendency least affected by outliers because due to how out of the ordinary they are, it is rare for more than one occurrence of said outlier to happen, this not affecting the mode
+
+"""
+
+
+#3.31
+
+None of these are appropriate for categorical data

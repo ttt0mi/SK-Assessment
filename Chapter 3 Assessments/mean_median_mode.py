@@ -1,16 +1,18 @@
+import numpy
+import statistics
+
 values = [9, 11, 22, 34, 17, 22, 34, 22, 40]
 
-mean = sum(values) / 3
+sorted_values = sorted(values)
 
-sorted_values = sort(values)
-
-median =	()
-
-
-print(mean)
-print(median)
-#print(mode)
+print("The mean is", numpy.mean(values))
+print("The median is", numpy.median(sorted_values))
+print("The mode is", statistics.mode(values))
 
 
-
-#INCOMPLETE
+"""
+if we add an extra 34 to the list of values:
+the mean changes
+the median changes
+the mode incurs a statisticsError
+"""

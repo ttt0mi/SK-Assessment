@@ -470,7 +470,7 @@ while proceed:
 		user_input = int(user_input)
 		user_input = user_input - 1
 
-		if any(user_input == question for question in questions.keys()):
+		if user_input in questions.keys():
 
 			q = questions.get(user_input)
 			q(True)

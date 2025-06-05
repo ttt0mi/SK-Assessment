@@ -9,7 +9,7 @@ def user_input_check(user_input):
 	elif user_input.isdecimal():
 		user_input = int(user_input)
 
-		if user_input in range(1, 11): return True
+		if user_input in range(1, 11): return user_input
 		else: return False
 
 	else:
@@ -69,7 +69,7 @@ def question2(proceed = False):
 		while attempts_counter < 2:
 
 			print("""
-			What is 45 6 * 1854?
+			What is 456 * 1854?
 			option A ->  lool dawg i dont know
 			option B ->  100000
 			option C ->  5e7
@@ -467,8 +467,7 @@ while proceed:
 			print("invalid input, try again")
 			continue
 
-		user_input = int(user_input)
-		user_input = user_input - 1
+		user_input = user_input_check(user_input) - 1
 
 		if user_input in questions.keys():
 
